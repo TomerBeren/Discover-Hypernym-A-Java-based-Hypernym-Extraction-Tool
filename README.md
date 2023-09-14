@@ -21,9 +21,28 @@ The command will look like this:
 
 ```bash
 java DiscoverHypernym /path/to/corpus-directory lemma
+```
+## Pattern Support
 
-Contribution
-This is a course assignment and is not open for contribution.
+The following Hearst Patterns are supported:
 
-License
-This project is for educational purposes and is not licensed.
+- `NP {,} such as NP {, NP, ..., {and|or} NP}`
+- `such NP as NP {, NP, ..., {and|or} NP}`
+- `NP {,} including NP {, NP, ..., {and|or} NP}`
+- `NP {,} especially NP {, NP, ..., {and|or} NP}`
+- `NP {,} which is {{an example|a kind|a class} of} NP`
+
+## Notes
+
+- The corpus should be pre-processed to include `<np>` tags around noun phrases.
+- The program respects OOP paradigms and follows the principles taught in the course.
+
+## How to Run
+
+After cloning the repository, navigate to the project root and execute:
+
+```bash
+unzip ass7.zip
+ant compile
+ant run
+```
